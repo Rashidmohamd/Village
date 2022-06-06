@@ -551,6 +551,8 @@ body {
     cursor: pointer;
     z-index: 400;
   }
+
+   
   .header .heading nav {
     position: fixed;
     z-index: 201;
@@ -580,6 +582,9 @@ body {
   html {
     font-size: 13px;
   }
+     .header .heading {
+       height: 15vh;
+     }
   .mainBody .mainContainer .tgeriba {
     flex-direction: column;
   }
