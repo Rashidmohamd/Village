@@ -1,0 +1,602 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  box-sizing: border-box;
+  background: #333;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer {
+  width: 80vw;
+  margin: auto;
+  padding: .3rem;
+}
+
+.menubtn {
+  position: fixed;
+  top: 1vh;
+  right: 1vw;
+  height: 34px;
+  width: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  visibility: collapse;
+}
+
+.menubtn .btnContainer {
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .5s linear;
+}
+
+.menubtn .btnContainer .menu {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all .5s linear;
+}
+
+.closebtn .btnContainer {
+  transition: all .5s linear;
+  transform: rotate(90deg);
+}
+
+.closebtn .btnContainer .menu {
+  transition: all .5s linear;
+}
+
+.closebtn .btnContainer .menuTop {
+  transform-origin: 50% 50%;
+  transform: rotate(-40deg) translatey(5px) translatex(-3px);
+}
+
+.closebtn .btnContainer .menuBottom {
+  transform-origin: 50% 50%;
+  transform: rotate(40deg) translatey(-5px) translatex(-3px);
+}
+
+.closebtn .btnContainer .menuMidel {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  width: 100vw;
+  height: 7vh;
+  background-color: #f39005;
+  color: white;
+  box-sizing: border-box;
+}
+
+.footer p {
+  padding-top: 1.5vh;
+}
+
+.header {
+  width: 100vw;
+}
+
+.header .heading {
+  position: fixed;
+  z-index: 200;
+  width: 100vw;
+  height: 20vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.header .heading .mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .heading .mainContainer .logoSect {
+  display: flex;
+}
+
+.header .heading .mainContainer .logoSect .logoImg img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.header .heading .mainContainer .logoSect .logoName {
+  margin-left: .5rem;
+  margin-top: .5rem;
+}
+
+.header .heading .mainContainer .logoSect .logoName h1 {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2.5rem;
+}
+
+.header .heading .mainContainer .logoSect .logoName h1 span {
+  color: yellow;
+}
+
+.header .heading nav {
+  margin-bottom: .5rem;
+}
+
+.header .heading nav ul {
+  list-style: none;
+}
+
+.header .heading nav ul li {
+  display: inline-block;
+  padding: .5rem;
+  margin-right: .5rem;
+}
+
+.header .heading nav ul li a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s linear;
+}
+
+.header .heading nav ul li a:hover {
+  color: lime;
+}
+
+.header .showCaseSect {
+  position: relative;
+  width: 100vw;
+  min-height: 80vh;
+}
+
+.header .showCaseSect .bgImgsContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.header .showCaseSect .bgImgsContainer img {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s linear;
+}
+
+.header .showCaseSect .bgImgsContainer .show {
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.header .showCaseSect .showCaseOverLay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header .showCaseSect .showCaseOverLay .mainContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .showCaseSect .showCaseOverLay .mainContainer .content {
+  width: 70vw;
+  padding-top: 2rem;
+}
+
+.header .showCaseSect .showCaseOverLay .mainContainer .content h1 {
+  font-size: 2rem;
+  color: #090909;
+  font-weight: 400;
+}
+
+.header .showCaseSect .showCaseOverLay .mainContainer .content h1 span {
+  color: #fcbe05;
+}
+
+.header .showCaseSect .showCaseOverLay .mainContainer .content h3 {
+  font-size: 1.7rem;
+  color: aliceblue;
+  font-weight: 300;
+}
+
+.mainBody .mainContainer .tgeriba {
+  display: flex;
+  background-color: rgba(130, 130, 130, 0.3);
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.mainBody .mainContainer .tgeriba .logo img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.mainBody .mainContainer .tgeriba .content {
+  width: 40vw;
+}
+
+.mainBody .mainContainer .tgeriba .content h1 {
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: gray;
+}
+
+.mainBody .mainContainer .tgeriba .content h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: gray;
+}
+
+.aboutSection {
+  margin-bottom: 1.5rem;
+}
+
+.aboutSection h3 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.aboutSection p {
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+
+.aboutSection .image {
+  height: 20vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.aboutSection .image1 {
+  background-image: url(/images/beauty.jpg);
+}
+
+.aboutSection .image2 {
+  background-image: url(/images/beauty1.jpg);
+}
+
+.aboutSection .image3 {
+  background-image: url(/images/beauty2.jpg);
+}
+
+.aboutSection .image4 {
+  background-image: url(/images/burn.jpg);
+}
+
+.autorSection .meNote {
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: .7rem;
+  border-radius: 5px;
+}
+
+.autorSection .meNote p {
+  font-style: italic;
+}
+
+.autorSection h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: .5rem 0;
+}
+
+.autorSection p {
+  font-size: 1.5rem;
+}
+
+.autorSection ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.autorSection ul li {
+  margin-right: 2rem;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.autorSection ul li:nth-child(1) {
+  color: lime;
+}
+
+.autorSection ul li:nth-child(2) {
+  color: blue;
+}
+
+.autorSection ul li:nth-child(3) {
+  color: yellow;
+}
+
+.autorSection .note {
+  margin-top: .5rem;
+}
+
+.autorSection .note h3 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.autorSection .note p {
+  font-size: 1.2rem;
+  padding: .5rem;
+  background: rgba(255, 255, 255, 0.2);
+  font-style: italic;
+  border-radius: 10px;
+}
+
+.autorSection .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.autorSection .head img {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+}
+
+.autorSection .head .info {
+  margin-left: 2rem;
+}
+
+.autorSection .head .info h3 {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.autorSection .form input, .autorSection .form textarea {
+  display: block;
+  margin: .5rem 0;
+  width: 100%;
+  outline: none;
+  font-size: 1.3rem;
+  background: rgba(90, 100, 104, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.autorSection .form input {
+  padding: .5rem;
+  border-radius: 5px;
+}
+
+.autorSection .form input:hover {
+  background: #0076ff;
+}
+
+.autorSection .form textarea {
+  border-radius: 5px;
+}
+
+.autorSection .form button {
+  font-size: 1.3rem;
+  padding: .5rem 1rem;
+  text-align: center;
+  width: 100%;
+  background: #0076ff;
+  border: none;
+  border-radius: 6px;
+  transition: all .5s linear;
+}
+
+.autorSection .form button:hover {
+  background-color: green;
+}
+
+.photoGallary {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  margin-bottom: .5rem;
+}
+
+.photoGallary .arrow {
+  position: absolute;
+  z-index: 20;
+  color: white;
+  top: 47%;
+  cursor: pointer;
+  padding: .4rem .5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  outline: none;
+}
+
+.photoGallary .arrow:hover {
+  background: #0076ff;
+}
+
+.photoGallary .arrow:active {
+  background: #1ec;
+}
+
+.photoGallary .leftArrow {
+  left: 3%;
+}
+
+.photoGallary .rightArrow {
+  right: 3%;
+}
+
+.photoGallary .slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.photoGallary .slider img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: all .5s linear;
+  opacity: 0;
+}
+
+.photoGallary .slider .currentImg {
+  opacity: 1;
+}
+
+.beauty h3 {
+  background-image: linear-gradient(to right, blue, lime);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  display: inline;
+}
+
+.beauty h4 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  display: inline-block;
+  background-image: linear-gradient(to right, red, green, yellow, lime);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.mediaSect {
+  width: 100vw;
+  height: 10vh;
+}
+
+.mediaSect .mainContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mediaSect .mainContainer a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.mediaSect .mainContainer a:hover {
+  transform: scale(1.2);
+}
+
+.mediaSect .mainContainer a:active {
+  transform: scale(0.95);
+}
+
+.mediaSect .mainContainer a:nth-child(1) {
+  color: #1c3a9e;
+}
+
+.mediaSect .mainContainer a:nth-child(2) {
+  color: #016215;
+}
+
+.mediaSect .mainContainer a:nth-child(3) {
+  color: #490606;
+}
+
+.mediaSect .mainContainer a:nth-child(4) {
+  color: #e5e9e5;
+}
+
+@media (max-width: 1200px) {
+  .mainContainer {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 16px;
+  }
+  .mainContainer {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 850px) {
+  html {
+    font-size: 16px;
+  }
+  .mainContainer {
+    width: 97vw;
+    margin: 0 auto;
+  }
+  .menubtn {
+    visibility: visible;
+    cursor: pointer;
+    z-index: 400;
+  }
+  .header .heading nav {
+    position: fixed;
+    z-index: 201;
+    height: 100vh;
+    right: -55vw;
+    top: 0;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all .5s linear;
+  }
+  .header .heading nav ul {
+    height: 50vh;
+    margin: 25vh 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 610px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 505px) {
+  html {
+    font-size: 13px;
+  }
+  .mainBody .mainContainer .tgeriba {
+    flex-direction: column;
+  }
+  .mainBody .mainContainer .tgeriba .content {
+    width: 90%;
+  }
+  .autorSection .head {
+    flex-direction: column;
+  }
+  .autorSection .head .info {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
